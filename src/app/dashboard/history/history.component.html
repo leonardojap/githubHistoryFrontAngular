@@ -1,0 +1,55 @@
+<div class="container mx-auto p-8">
+  <p class="text-2xl text-neutral-800">
+    <i class="fa-solid fa-laptop-code"></i> Repository > {{ proyect }}
+  </p>
+  <div class="container p-8">
+    <div class="flex justify-start items-center">
+      <p><i class="fa-sharp fa-solid fa-code-branch"></i> 2 Repositories</p>
+      <label for="underline_select" class="sr-only">Underline select</label>
+      <select
+        id="underline_select"
+        class="mx-4 block py-2.5 w-3/12 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+        (change)="changeProyect($event)"
+      >
+        <option selected>Choose a Repository</option>
+        <option *ngFor="let item of repositories">{{ item.name }}</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col my-8">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            <table class="min-w-full text-left text-sm font-light">
+              <tr
+                class="border-b dark:border-neutral-500"
+                *ngFor="let item of commits"
+              >
+                <td class="whitespace-nowrap px-6 py-4 font-medium">
+                  <i class="fa-solid fa-code-commit"></i> {{ item.sha }}
+                </td>
+                <td
+                  class="whitespace-nowrap px-6 py-4 flex justify-start items-center"
+                >
+                  <img
+                    [src]="item.author.avatar_url"
+                    alt=""
+                    width="30"
+                    class="mx-1"
+                  />
+                  {{ item.commit.author.name }}
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  {{ item.commit.message }}
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  {{ item.commit.author.date | date : "MM/dd/yyyy HH:mm" }}
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
