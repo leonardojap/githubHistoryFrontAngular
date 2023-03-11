@@ -1,0 +1,21 @@
+.console {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  overflow: auto;
+  min-height: 50px;
+  width: 100%;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.nameMethod {
+  font-weight: bold;
+  font-size: 18px;
+}
