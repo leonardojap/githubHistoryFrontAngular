@@ -1,11 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     loadChildren: () =>
-      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      import("./dashboard/dashboard.module").then((m) => m.DashboardModule),
+  },
+  {
+    path: "backMethods",
+    loadChildren: () =>
+      import("./back-methods/back-methods.module").then(
+        (m) => m.BackMethodsModule
+      ),
   },
 ];
 
