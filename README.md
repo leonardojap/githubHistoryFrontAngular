@@ -30,3 +30,8 @@ $ ng serve
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+
+![image](https://user-images.githubusercontent.com/8810299/224502773-b23b5c08-3eaf-4c67-90b8-44c0f7320b6d.png)
+
+![image](https://user-images.githubusercontent.com/8810299/224502796-68a7eee8-af16-40d7-9b53-564fe92810f7.png)
+
